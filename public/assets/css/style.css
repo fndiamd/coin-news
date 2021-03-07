@@ -116,3 +116,23 @@ footer{
     line-height: 60px;
     color:#fff;
 }
+
+.nav-side{
+    background-color:#fff;
+    min-height: 90vh;
+    border-right: 2px solid #E84118;
+    padding: 0;
+}
+
+.nav-side > .nav-header{
+    background-color: #E84118;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    color: #f5f5f5;
+}
+
+.main-section{
+    background-color:#f5f5f5;
+}

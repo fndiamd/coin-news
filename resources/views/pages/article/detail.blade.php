@@ -21,6 +21,9 @@
             @auth
                 <div class="row justify-content-md-center">
                     <div class="col" style="max-height: 400px; overflow-y:scroll;">
+                        @if ($comments->isEmpty())
+                            <div class="text-muted text-center">------------ Belum ada komentar -----------</div>
+                        @endif
                         @foreach ($comments as $comment)
                             <div class="card">
                                 <div class="card-body">

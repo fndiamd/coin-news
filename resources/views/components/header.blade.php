@@ -19,7 +19,7 @@
                 </li>
                 @auth
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('my-article') }}">My Article</a>
+                        <a class="nav-link" href="{{ url('my-article') }}">Artikelku</a>
                     </li>
                 @endauth
                 

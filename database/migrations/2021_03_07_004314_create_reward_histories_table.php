@@ -19,7 +19,7 @@ class CreateRewardHistoriesTable extends Migration
             $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
             $table->integer('reward_id')->unsigned();
             $table->foreign('reward_id')->references('reward_id')->on('rewards')->onDelete('cascade');
-            $table->integer('reward_status')->unsigned();
+            $table->integer('reward_status')->unsigned()->default(0);
             $table->timestamps();
         });
     }

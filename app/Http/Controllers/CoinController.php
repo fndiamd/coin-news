@@ -17,7 +17,7 @@ class CoinController extends Controller
         return view('pages.earn-coin', $data);
     }
 
-    public function historyCoin(){
+    public function history(){
         $data = [
             'title' => 'History Coin',
             'histories' => PointHistory::where('user_id', Auth::user()->user_id)->with('activity')->get()

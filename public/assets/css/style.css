@@ -54,7 +54,7 @@ a:hover{
 .section-row{
     margin: 20px 0;
     padding: 20px 15px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #AAA;
 }
 
 .section-title{
@@ -86,4 +86,33 @@ a:hover{
 .card-header{
     font-size: 18px;
     font-weight: 600;
+}
+
+.content{
+    padding:30px 0;
+    min-height:80vh;
+    background-color:#f5f5f5;
+}
+
+.jumbotron{
+    margin:0;
+}
+
+.article-content{
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 1.8em;
+}
+
+.my-article{
+    margin-bottom:10px;
+}
+
+
+footer{
+    text-align: center;
+    background-color: #161f27;
+    height:60px;
+    line-height: 60px;
+    color:#fff;
 }

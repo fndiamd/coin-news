@@ -45,7 +45,8 @@ Route::middleware('auth')->group(function () {
     
     Route::get('reward/redeem/{id}', [RewardController::class, 'redeem']);
     
-    Route::get('account/history/coin', [CoinController::class, 'historyCoin']);
+    Route::get('account/history/coin', [CoinController::class, 'history']);
+    Route::get('account/history/reward', [RewardController::class, 'history']);
     Route::get('account/panel', [AccountController::class, 'index']);
     Route::get('account/setting', [AccountController::class, 'showSettingForm']);
     Route::post('account/update', [AccountController::Class, 'update']);

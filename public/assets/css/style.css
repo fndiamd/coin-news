@@ -1,0 +1,89 @@
+a{
+    color: #212529;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #212529;
+}
+
+.navbar {
+    border-bottom: 2px solid #fff;;
+}
+.nav-link {
+    color: #fff !important;
+}
+
+.required-field{
+    color: red;
+}
+
+.optional-field{
+    font-size: 12px;
+    color: grey;
+}
+
+.btn-danger{
+    background-color: #E84118;
+    border-color: #E84118;
+}
+
+.form-shadow{
+    box-shadow: 2px 2px 5px 4px grey;
+    border-radius: 5px;
+}
+
+.jumbotron{
+    background-color: #E84118;
+    border-radius: 0;
+    color: #fff;
+}
+
+.flash-container{
+    position: relative;
+}
+
+.alert-absolute{
+    position: absolute;
+    width: 100%;
+    top:10px;
+    color: #222;
+    z-index: 10;
+}
+
+.section-row{
+    margin: 20px 0;
+    padding: 20px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.section-title{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.section-title::after{
+    content: "";
+    width: 100px;
+    height:3px;
+    background-color: #E84118;
+    position:absolute;
+    bottom:-5px;
+    left:0;
+}
+
+.empty-field {
+    display: block;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.card-header-red{
+    background-color: #E84118;
+    color: #fff;
+}
+
+.card-header{
+    font-size: 18px;
+    font-weight: 600;
+}

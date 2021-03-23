@@ -77,4 +77,5 @@ Route::prefix('admin')->middleware('auth:admin')->group(function(){
     Route::post('master/reward/edit/{id}', [AdminReward::class, 'update']);
     Route::get('transaction/redeem', [RedeemController::class, 'index']);
     Route::get('transaction/redeem/accept/{id}', [RedeemController::class, 'accept']);
+    Route::get('transaction/redeem/decline/{id}', [RedeemController::class, 'decline']);
 });

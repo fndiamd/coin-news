@@ -62,29 +62,23 @@ class LoginController extends Controller
 
     public function adminLogout(Request $request)
     {
-        if (Auth::guard('admin')->check()) // this means that the admin was logged in.
+        if (Auth::guard('admin')->check()) 
         {
             Auth::guard('admin')->logout();
             return redirect('admin/login');
+        }else{
+            return redirect('admin/login');
         }
-
-        $this->guard()->logout();
-        $request->session()->invalidate();
-
-        return $this->loggedOut($request) ?: redirect('/');
     }
 
-    public function logout()
+    public function logout(Request $request)
     {
-        if (Auth::guard('member')->check()) // this means that the admin was logged in.
+        if (Auth::guard('member')->check()) 
         {
             Auth::guard('member')->logout();
             return redirect('/');
+        }else{
+            return redirect('/login');
         }
-
-        $this->guard()->logout();
-        $request->session()->invalidate();
-
-        return $this->loggedOut($request) ?: redirect('/');
     }
 }

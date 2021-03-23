@@ -20,11 +20,13 @@
                             <td>{{ $item->user->user_name }}</td>
                             <td>{{ $item->reward->reward_title }}</td>
                             <td>
-                                @if ($item->reward_status)
+                                @if ($item->reward_status == 1)
                                     <span class="badge badge-success">Sukses</span>
 
+                                @elseif($item->reward_status == 2)
+                                    <span class="badge badge-danger">Ditolak</span>
                                 @else
-                                    <span class="badge badge-secondary">Menunggu konfirmasi</span>
+                                    <span class="badge badge-secondary">Menunggu Konfirmasi</span>
                                 @endif
                             </td>
                             <td>

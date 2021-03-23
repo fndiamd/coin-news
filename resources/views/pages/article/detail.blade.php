@@ -18,26 +18,29 @@
             </div>
             <br>
             <br>
-            @auth
-                <div class="row justify-content-md-center">
-                    <div class="col" style="max-height: 400px; overflow-y:scroll;">
-                        @if ($comments->isEmpty())
-                            <div class="text-muted text-center">------------ Belum ada komentar -----------</div>
-                        @endif
-                        @foreach ($comments as $comment)
-                            <div class="card">
-                                <div class="card-body">
-                                    <blockquote class="blockquote mb-0">
-                                        <p>{{ $comment->comment }}</p>
-                                        <footer class="blockquote-footer">{{ $comment->user->user_name }},
-                                            {{ $comment->created_at->diffForHumans() }}</footer>
-                                    </blockquote>
-                                </div>
+
+            <div class="row justify-content-md-center">
+
+                <div class="col" style="max-height: 400px; overflow-y:scroll;">
+                    @if ($comments->isEmpty())
+                        <div class="text-muted text-center">------------ Belum ada komentar -----------</div>
+                    @endif
+                    @foreach ($comments as $comment)
+                        <div class="card">
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>{{ $comment->comment }}</p>
+                                    <footer class="blockquote-footer">{{ $comment->user->user_name }},
+                                        {{ $comment->created_at->diffForHumans() }}</footer>
+                                </blockquote>
                             </div>
-                            <br>
-                        @endforeach
-                    </div>
-                    <div class="col">
+                        </div>
+                        <br>
+                    @endforeach
+                </div>
+
+                <div class="col">
+                    @auth
                         <form method="POST" action="{{ url('comment/' . $article->article_id) }}">
                             @csrf
                             <div class="form-group">
@@ -46,9 +49,11 @@
                             </div>
                             <button type="submit" class="btn btn-danger">Kirim</button>
                         </form>
-                    </div>
+                    @endauth
                 </div>
-            @endauth
+
+            </div>
+
         </div>
     </div>
 @endsection

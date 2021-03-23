@@ -23,4 +23,11 @@ class RedeemController extends Controller
         $redeem->save();
         return redirect('admin/transaction/redeem')->with('success', 'Penukaran hadiah telah disetujui');
     }
+
+    public function decline($id){
+        $redeem = RewardHistory::find($id);
+        $redeem->reward_status = 2;
+        $redeem->save();
+        return redirect('admin/transaction/redeem')->with('success', 'Penukaran hadiah telah ditolak');
+    }
 }
